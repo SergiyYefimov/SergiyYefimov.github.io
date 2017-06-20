@@ -1,4 +1,63 @@
-h1 {
-	font-size: 60px;
-	color: red;
+*{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url(../img/dotted.jpg);
+  background-repeat: repeat;
+}
+nav{
+  font-family:  Verdana;
+}
+a:visited{
+  color: black;
+}
+#nav-main{
+  display: block;
+  width: calc(100% - 50% + 20vw);
+  height: 5vh;
+  line-height: 5vh;
+  margin: 0 auto;
+  list-style-type: none;
+  text-align: center;
+  padding-left: calc(50% - 20vw);
+}
+#nav-main li{
+  height: 5vh;
+  width: 10vw;
+  display: inline-block;
+  background-color: #F3F3F3;
+  float: left;
+  font-size: 2vh;
+  transition: all .4s;
+}
+#nav-main li:hover {
+  background-color: #008CBA;
+}
+#nav-main li ul{
+  width: 0px;
+  /*visibility: hidden;*/
+  display: none;
+  transition: all .4s;
+}
+#nav-main li ul {
+  position: relative;
+  transition: all .4s;
+}
+#nav-main li:hover ul{
+  /*visibility: visible;*/
+  display: block;
+}
+/*+++++++++++level two+++++++++++*/
+#nav-main li ul li ul{
+  position: absolute;
+  top: 5vh;
+  left: 10vw;
+  /*display: none;*/
+  visibility: hidden;
+  transition: all 0s;
+}
+#nav-main li ul li:hover ul{
+  /*display: block;*/
+  visibility: visible;
 }
